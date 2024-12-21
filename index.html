@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link href="./lib/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- start nav -->
+    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary bg-main">
+      <div class="container">
+        <a class="navbar-brand" href="#">Bean Boutique</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="coffee.html">Coffees</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="coffee-equipment.html"
+                >Coffee Equipments</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end nav -->
+
+    <!-- start main -->
+    <main class="bg-main">
+      <!-- hero -->
+      <section class="position-relative bg-dark">
+        <!-- <div class="position-absolute start-0 top-0 w-100">
+          <img src="./images/topwave.png" alt="Top Wave" class="w-100" />
+        </div> -->
+        <div class="position-absolute start-0 w-100" style="bottom: -5px">
+          <img src="./images/bottomwave.png" alt="Bottom Wave" class="w-100" />
+        </div>
+        <div class="container pt-5 pt-md-0">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <div
+                class="h-100 d-flex flex-column justify-content-center align-items-center align-items-md-start h-full py-3"
+              >
+                <h2 class="fs-5 text-sec">FRESHLY ROASTED</h2>
+                <h1 class="fs-2 text-main">COFFEE BY</h1>
+                <h1 class="fs-1 text-main">BEAN BOUTIQUE</h1>
+                <button type="button" class="btn btn-outline-light">
+                  Shop Now
+                </button>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="d-flex justify-content-center align-items-center">
+                <img
+                  src="./images/hero_coffee.png"
+                  alt="Coffee Bean With Cup Image"
+                  class="w-100 h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- coffee section -->
+      <section class="py-5 container">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center text-center"
+        >
+          <h3 class="fs-2">Coffee</h3>
+          <p class="fs-6">Explore The Recent Most Bought Coffee This Week</p>
+        </div>
+        <div class="container">
+          <div class="row gap-lg-0">
+            <div class="col-md-6 col-lg-4 mb-2">
+              <div class="card text-bg-dark">
+                <img
+                  src="./images/coffee/OrganicGuatemala-01.webp"
+                  class="card-img"
+                  alt="Coffee Image"
+                />
+                <div
+                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
+                >
+                  <h5 class="card-title">
+                    Guatemala Organic Single Origin Coffee
+                  </h5>
+                  <p class="card-text text-clip-2-lines">
+                    You'll savor the smoky robust flavor of our Guatemala
+                    Organic single origin ground coffee.
+                  </p>
+                  <a href="#" class="float-end text-white">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-2">
+              <div class="card text-bg-dark">
+                <img
+                  src="./images/coffee/OrganicSumatra-11.webp"
+                  class="card-img"
+                  alt="Coffee Image"
+                />
+                <div
+                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
+                >
+                  <h5 class="card-title">Sumatra Organic Dark Single Origin</h5>
+                  <p class="card-text text-clip-2-lines">
+                    One taste of our Sumatra Mandheling Organic single origin
+                    dark roast whole bean coffee and you'll discover a sweet
+                    malty flavor with a caramel finish and a deep aroma.
+                  </p>
+                  <a href="#" class="float-end text-white">View</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-2 d-none d-lg-block">
+              <div class="card text-bg-dark">
+                <img
+                  src="./images/coffee/E-Comm_CoffeeBagVisuals_16oz_131124-11.webp"
+                  class="card-img"
+                  alt="Coffee Image"
+                />
+                <div
+                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
+                >
+                  <h5 class="card-title">
+                    Brazil Cerrado Single Origin Coffee
+                  </h5>
+                  <p class="card-text text-clip-2-lines">
+                    A giant of worldwide coffee production, Brazil produces not
+                    only the most coffee, it also grows some of the best. Our
+                    Brazil Cerrado light roast single origin coffee is grown in
+                    the hot, flat savannahs of Minas Gerais.
+                  </p>
+                  <a href="#" class="float-end text-white">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vstack gap-2 col-md-5 mx-auto my-3">
+            <button class="btn btn-outline-dark mx-auto w-100">
+              See All Coffee
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- some info section -->
+      <section class="bg-white bg-opacity-75 py-5">
+        <div class="container">
+          <div class="row px-5">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="w-100 d-flex justify-content-md-center align-items-center mb-2"
+              >
+                <img
+                  width="50"
+                  src="./images/icons/coffee-beans.png"
+                  alt="coffee-beans.png"
+                  class="me-3"
+                />
+                <div>
+                  <p class="m-0 fs-4">Fresh Coffee</p>
+                  <p class="m-0">Fresh Bean</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div
+                class="w-100 d-flex justify-content-md-center align-items-center mb-2"
+              >
+                <img
+                  width="50"
+                  src="./images/icons/delivery-man.png"
+                  alt="coffee-beans.png"
+                  class="me-3"
+                />
+                <div>
+                  <p class="m-0 fs-4">Free Delivery</p>
+                  <p class="m-0">Fresh Bean</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div
+                class="w-100 d-flex justify-content-md-center align-items-center mb-2"
+              >
+                <img
+                  width="50"
+                  src="./images/icons/24-hour-clock.png"
+                  alt="coffee-beans.png"
+                  class="me-3"
+                />
+                <div>
+                  <p class="m-0 fs-4">24/7 Sale Center</p>
+                  <p class="m-0 fs-6">Active Sale center for global.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Equipment section -->
+      <section class="py-5 container">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center text-center"
+        >
+          <h3 class="fs-2">Equipment</h3>
+          <p class="fs-6">Explore The Recent Most Bought Coffee This Week</p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="d-none d-md-block col-12 col-md-4">
+              <div
+                style="width: 100%; height: 100%"
+                class="rounded overflow-hidden position-relative"
+              >
+                <img
+                  width="100%"
+                  height="100%"
+                  class="object-fit-cover"
+                  src="./images/machine.jpeg"
+                  alt="Coffee Machine"
+                />
+                <div
+                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark text-white w-100 h-100 d-flex flex-column align-items-start justify-content-end"
+                >
+                  <h5>UltimateTaste 500 drip coffee maker</h5>
+                  <p class="text-clip-2-lines">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Illo maiores aspernatur, cum cumque vitae iusto voluptas
+                    modi eius odio aperiam?
+                  </p>
+                  <a href="" class="text-white">View</a>
+                </div>
+              </div>
+            </div>
+            <div class="d-md-none col-12 col-md-4">
+              <div
+                class="ratio ratio-21x9 w-100 mb-2 rounded overflow-hidden position-relative"
+              >
+                <img
+                  width="100%"
+                  height="100%"
+                  class="object-fit-cover"
+                  src="./images/machine.jpeg"
+                  alt="Coffee Machine"
+                />
+                <div
+                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark text-white w-100 h-100 d-flex flex-column align-items-start justify-content-end"
+                >
+                  <h5>UltimateTaste 500 drip coffee maker</h5>
+                  <p class="text-clip-2-lines">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Illo maiores aspernatur, cum cumque vitae iusto voluptas
+                    modi eius odio aperiam?
+                  </p>
+                  <a href="" class="text-white">View</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+              <div class="row">
+                <div class="col-6 col-md-6">
+                  <div
+                    class="ratio ratio-1x1 w-100 mb-2 rounded overflow-hidden bg-dark"
+                  >
+                    <img
+                      width="100%"
+                      height="100%"
+                      class="object-fit-cover"
+                      src="./images/machine_2.png"
+                      alt="Coffee Machine"
+                    />
+                    <div
+                      class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark text-white w-100 h-100 d-flex flex-column align-items-start justify-content-end"
+                    >
+                      <h5>UltimateTaste 500 drip coffee maker</h5>
+                      <p class="text-clip-2-lines">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Illo maiores aspernatur, cum cumque vitae iusto voluptas
+                        modi eius odio aperiam?
+                      </p>
+                      <a href="" class="text-white">View</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div
+                    class="ratio ratio-1x1 w-100 mb-2 rounded overflow-hidden bg-dark position-relative"
+                  >
+                    <img
+                      width="100%"
+                      height="100%"
+                      class="object-fit-cover"
+                      src="./images/machine_3.png"
+                      alt="Coffee Machine"
+                    />
+                    <div
+                      class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark text-white w-100 h-100 d-flex flex-column align-items-start justify-content-end"
+                    >
+                      <h5>UltimateTaste 500 drip coffee maker</h5>
+                      <p class="text-clip-2-lines">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Illo maiores aspernatur, cum cumque vitae iusto voluptas
+                        modi eius odio aperiam?
+                      </p>
+                      <a href="" class="text-white">View</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="col-4 col-md-6 d-md-none">
+                  <div
+                    class="ratio ratio-1x1 w-100 mb-2"
+                    style="background-color: cadetblue"
+                  ></div>
+                </div> -->
+
+                <div class="col-12">
+                  <div
+                    class="ratio ratio-21x9 w-100 rounded overflow-hidden bg-dark position-relative"
+                  >
+                    <img
+                      width="100%"
+                      height="100%"
+                      class="object-fit-cover"
+                      src="./images/all.jpeg"
+                      alt="Coffee Machine"
+                    />
+                    <div
+                      class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark text-white w-100 h-100 d-flex flex-column align-items-end justify-content-end"
+                    >
+                      <a href="" class="text-white">View All Equipments</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- end main -->
+
+    <!-- start footer -->
+    <footer class="bg-dark text-white">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3">
+            <p class="mb-0 fs-5">Products</p>
+            <ul class="ps-2">
+              <li class="list-group-item">Test</li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <p class="mb-0 fs-5">Category</p>
+            <ul class="ps-2">
+              <li class="list-group-item">Category 1</li>
+              <li class="list-group-item">Category 2</li>
+              <li class="list-group-item">Category 3</li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <p class="mb-0 fs-5">Company Info</p>
+            <ul class="ps-2">
+              <li class="list-group-item">About US</li>
+              <li class="list-group-item">Contact US</li>
+              <li class="list-group-item">Support</li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3">
+            <p class="mb-0 fs-5">Follow US</p>
+            <ul class="ps-2">
+              <li class="list-group-item">Facebook</li>
+              <li class="list-group-item">Instragram</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <div class="bg-main py-2">
+      <p class="text-center mb-0">All Right Reserved | Copyright © 2024</p>
+    </div>
+    <script src="./lib/bootstrap/bootstrap.js"></script>
+  </body>
+</html>

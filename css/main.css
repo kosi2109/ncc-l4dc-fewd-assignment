@@ -1,0 +1,28 @@
+:root {
+  --main-color: rgba(204, 164, 140, 1);
+  --sec-color: rgb(235, 204, 188);
+}
+
+.bg-main {
+  background-color: var(--main-color) !important;
+}
+
+.text-main {
+  color: var(--main-color) !important;
+}
+
+.bg-sec {
+  background-color: var(--sec-color);
+}
+
+.text-sec {
+  color: var(--sec-color);
+}
+
+.text-clip-2-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limits text to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
