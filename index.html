@@ -7,12 +7,13 @@
 
     <link href="./lib/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
+    <link href="./lib/fontawsome/fontawsome.css" rel="stylesheet" />
   </head>
   <body>
     <!-- start nav -->
-    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary bg-main">
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary bg-main">
       <div class="container">
-        <a class="navbar-brand" href="#">Bean Boutique</a>
+        <a class="navbar-brand" href="index.html">Bean Boutique</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -42,7 +43,28 @@
                 >Coffee Equipments</a
               >
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="coffee-equipment.html"
+                >Events & Workshops</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="coffee-equipment.html"
+                >Special Offer & Subscriptions</a
+              >
+            </li>
           </ul>
+          <div>
+            <div class="position-relative" style="cursor: pointer;width: fit-content;">
+              <div
+                class="position-absolute bg-dark text-white p-1 rounded-circle d-flex justify-content-center align-items-center"
+                style="width: 20px; height: 20px; top: -10px; right: -10px"
+              >
+                <p class="pb-0 mb-0" style="font-size: 10px">10</p>
+              </div>
+              <i class="fa-solid fa-cart-shopping fs-5"></i>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -55,10 +77,14 @@
         <!-- <div class="position-absolute start-0 top-0 w-100">
           <img src="./images/topwave.png" alt="Top Wave" class="w-100" />
         </div> -->
-        <div class="position-absolute start-0 w-100" style="bottom: -5px">
+        <div
+          class="position-absolute start-0 w-100 z-1 pe-none"
+          style="bottom: -10px"
+        >
           <img src="./images/bottomwave.png" alt="Bottom Wave" class="w-100" />
         </div>
-        <div class="container pt-5 pt-md-0">
+
+        <div class="container pt-5 pt-md-0 z-3">
           <div class="row">
             <div class="col-12 col-md-6">
               <div
@@ -67,9 +93,9 @@
                 <h2 class="fs-5 text-sec">FRESHLY ROASTED</h2>
                 <h1 class="fs-2 text-main">COFFEE BY</h1>
                 <h1 class="fs-1 text-main">BEAN BOUTIQUE</h1>
-                <button type="button" class="btn btn-outline-light">
+                <a href="coffee.html" class="btn btn-outline-light">
                   Shop Now
-                </button>
+                </a>
               </div>
             </div>
             <div class="col-12 col-md-6">
@@ -88,7 +114,7 @@
       <!-- coffee section -->
       <section class="py-5 container">
         <div
-          class="d-flex flex-column justify-content-center align-items-center text-center"
+          class="d-flex flex-column justify-content-center align-items-center text-center z-3"
         >
           <h3 class="fs-2">Coffee</h3>
           <p class="fs-6">Explore The Recent Most Bought Coffee This Week</p>
@@ -162,9 +188,9 @@
             </div>
           </div>
           <div class="vstack gap-2 col-md-5 mx-auto my-3">
-            <button class="btn btn-outline-dark mx-auto w-100">
+            <a class="btn btn-outline-dark mx-auto w-100" href="coffee.html">
               See All Coffee
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -357,7 +383,9 @@
                     <div
                       class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark text-white w-100 h-100 d-flex flex-column align-items-end justify-content-end"
                     >
-                      <a href="" class="text-white">View All Equipments</a>
+                      <a href="coffee-equipment.html" class="text-white"
+                        >View All Equipments</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -410,5 +438,6 @@
       <p class="text-center mb-0">All Right Reserved | Copyright © 2024</p>
     </div>
     <script src="./lib/bootstrap/bootstrap.js"></script>
+    <script src="./lib/fontawsome/fontawsome.js"></script>
   </body>
 </html>
