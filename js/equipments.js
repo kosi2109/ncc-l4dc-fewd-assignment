@@ -1,28 +1,141 @@
-const renderItems = () => {
-  equipments.forEach((equipment) => {
-    $("#coffee-equipments").append(`
-            <div class="col-md-6 col-lg-4 mb-2">
-                <div class="card text-bg-dark">
-                    <img
-                        src="${equipment.images[0]}"
-                        class="card-img"
-                        alt="Coffee Image"
-                    />
-                    <div class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark">
-                      <h5 class="card-title">
-                        ${equipment.name}
-                      </h5>
-                      <p class="card-text text-clip-2-lines">
-                        ${equipment.description}
-                      </p>
-                      <a href="${equipment.href}" class="float-end text-white">View</a>
-                    </div>
-                </div>
-             </div>    
-        `);
-  });
+const getFromStorage = (key) => {
+  return JSON.parse(localStorage.getItem(key)) || [];
+};
+
+const setToLocalStorage = (key, value) => {
+  localStorage.setItem(key, JSON.stringify(value));
+};
+
+const getCounts = () => {
+  const cart = getFromStorage("cart");
+
+  $("#cart-count").text(cart.reduce((acc, item) => acc + item.quantity, 0));
 };
 
 $(document).ready(function () {
-  renderItems();
+  getCounts();
+  render();
 });
+
+const render = () => {
+  renderCartsItems();
+
+  addToCart();
+  removeFromCart();
+  clearCart();
+};
+
+const addToCart = () => {
+  $(".add-to-cart").click(function () {
+    const id = $(this).attr("data-id");
+    const name = $(this).attr("data-name");
+    const image = $(this).attr("data-image");
+    const price = $(this).attr("data-price");
+
+    const cart = getFromStorage("cart");
+    const existingItem = cart.find((item) => item.id === id);
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+      existingItem.total = existingItem.price * existingItem.quantity;
+    } else {
+      cart.push({ id, name, image, quantity: 1, price, total: price });
+    }
+
+    setToLocalStorage("cart", cart);
+    getCounts();
+    render();
+  });
+};
+
+const removeFromCart = () => {
+  $(".remove-from-cart").click(function () {
+    const id = $(this).attr("data-id");
+    const cart = getFromStorage("cart");
+    const existingItem = cart.find((item) => item.id === id);
+
+    if (existingItem) {
+      existingItem.quantity -= 1;
+      existingItem.total = existingItem.price * existingItem.quantity;
+
+      if (existingItem.quantity === 0) {
+        cart.splice(cart.indexOf(existingItem), 1);
+      }
+    }
+
+    setToLocalStorage("cart", cart);
+    getCounts();
+    render();
+  });
+};
+
+const clearCart = () => {
+  $("#clear-cart").click(function () {
+    localStorage.removeItem("cart");
+    getCounts();
+    render();
+  });
+};
+
+const renderCartsItems = () => {
+  const cart = getFromStorage("cart");
+  const cartItems = $("#cart-items");
+  const checkOutButton = $("#checkout-btn");
+
+  checkOutButton.prop("disabled", cart.length < 1);
+
+  if (!cart || cart.length < 1) {
+    cartItems.html(`<p class="fs-5">Your cart is empty.</p>`);
+    $("#grand-total").text(`$ 0`);
+  } else {
+    cartItems.empty();
+
+    cart.forEach((item) => {
+      cartItems.append(`
+         <div
+               class="d-flex justify-content-between align-items-end bg-light p-2 rounded-2 mb-2"
+             >
+               <div class="w-75 d-flex justify-content-start align-items-center">
+                 <div
+                   class="me-3 overflow-hidden h-100 bg-dark"
+                   style="width: 30%"
+                 >
+                   <img
+                     src="${item.image}"
+                     alt=""
+                     class="w-100 h-100"
+                   />
+                 </div>
+                 <div class="w-75 h-100">
+                   <p class="fs-5 text-clip-2-lines">${item.name}</p>
+                   <p class="fs-6 text-muted">$ ${item.price}</p>
+                   <div
+                     class="w-100 d-flex justify-content-start align-items-center h-100 gap-2"
+                   >
+                     <button class="btn btn-warning remove-from-cart" data-id="${item.id}">
+                       -
+                     </button>
+                     <div class="btn btn-outline-dark">
+                       <p class="m-0">${item.quantity}</p>
+                     </div>
+                     <button class="btn btn-dark add-to-cart" data-id="${item.id}">
+                       +
+                     </button>
+                   </div>
+                 </div>
+               </div>
+               <div>
+                 <p class="fs-4 fw-semibold">$ ${item.total}</p>
+               </div>
+             </div>
+       `);
+    });
+
+    console.log(cart);
+    console.log(cart.reduce((acc, item) => acc + item.total, 0));
+
+    $("#grand-total").text(
+      `$ ${cart.reduce((acc, item) => acc + item.total, 0)}`
+    );
+  }
+};

@@ -10,7 +10,7 @@
   </head>
   <body>
     <!-- start nav -->
-    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary bg-main">
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary bg-main">
       <div class="container">
         <a class="navbar-brand" href="index.html">Bean Boutique</a>
         <button
@@ -40,7 +40,42 @@
                 >Coffee Equipments</a
               >
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="coffee-equipment.html"
+                >Events & Workshops</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="coffee-equipment.html"
+                >Special Offer & Subscriptions</a
+              >
+            </li>
           </ul>
+          <div>
+            <a
+              class="position-relative"
+              style="cursor: pointer; width: fit-content"
+              href="cart.html"
+            >
+              <div
+                class="position-absolute bg-dark text-white p-1 rounded-circle d-flex justify-content-center align-items-center"
+                style="
+                  width: 20px;
+                  height: 20px;
+                  top: -10px;
+                  right: -10px;
+                  text-decoration: none;
+                "
+              >
+                <p
+                  class="pb-0 mb-0"
+                  style="font-size: 10px"
+                  id="cart-count"
+                ></p>
+              </div>
+              <i class="fa-solid fa-cart-shopping fs-5 text-dark"></i>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
@@ -49,11 +84,137 @@
     <!-- start main -->
     <main class="bg-main">
       <!-- hero -->
-
       <!-- coffee section -->
       <section class="py-5 container">
-        <div class="container">
-          <div class="row gap-lg-0" id="coffee-equipments"></div>
+        <h1 class="text-left fs-1">Coffee Equipments</h1>
+        <div class="row gap-lg-0" id="coffee-equipments">
+          <div class="col-md-6 col-lg-4 mb-2">
+            <div class="card text-bg-dark">
+              <img
+                src="./images/equipments/Timemore U French Press/30.webp"
+                class="card-img"
+                alt="Coffee Image"
+              />
+              <div
+                class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
+              >
+                <h5 class="card-title">Timemore U French Press</h5>
+                <p class="card-text text-clip-2-lines">
+                  A timeless way to brew coffee with a minimalist touch. The
+                  Timemore French Press features a minimalist sleeve design and
+                  a V-shape spout for a smooth and consistent pour. The sleek
+                  body is easy to grip and is heat-resistant for a comfortable
+                  brewing experience.
+                </p>
+                <button
+                  class="btn btn-outline-light add-to-cart"
+                  data-id="E1"
+                  data-name="Timemore U French Press"
+                  data-image="./images/equipments/Timemore U French Press/30.webp"
+                  data-price="160"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-2">
+            <div class="card text-bg-dark">
+              <img
+                src="./images/equipments/Timemore Chestnut C3 Hand Grinder/BBJ1255.webp"
+                class="card-img"
+                alt="Coffee Image"
+              />
+              <div
+                class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
+              >
+                <h5 class="card-title">Timemore Chestnut C3 Hand Grinder</h5>
+                <p class="card-text text-clip-2-lines">
+                  The Timemore Chestnut C3 hand grinder is a fast and furious
+                  beauty. Featuring a full grind range with stepped adjustment
+                  and 38mm conical steel burrs, this small and mighty hand
+                  grinder gives you the flexibility to adjust your grind size
+                  for every type of coffee from espresso to french press.
+                </p>
+                <button
+                  class="btn btn-outline-light add-to-cart"
+                  data-id="E2"
+                  data-name="Timemore Chestnut C3 Hand Grinder"
+                  data-image="./images/equipments/Timemore Chestnut C3 Hand Grinder/BBJ1255.webp"
+                  data-price="100"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-2">
+            <div class="card text-bg-dark">
+              <img
+                src="./images/equipments/Timemore Mirror Scale/BBJ1493.webp"
+                class="card-img"
+                alt="Coffee Image"
+              />
+              <div
+                class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
+              >
+                <h5 class="card-title">Timemore Mirror Scale</h5>
+                <p class="card-text text-clip-2-lines">
+                  The Mirror Scale has a high precision sensor, guaranteeing
+                  accuracy of 0.1g for a reliable brew every time. With a
+                  battery life lasting up to 10 hours and a new
+                  scratch-resistant matte texture, this sleek scale has
+                  everything you need to make the perfect brew while looking
+                  real fine on your countertop.
+                </p>
+                <button
+                  class="btn btn-outline-light add-to-cart"
+                  data-id="E3"
+                  data-name="Timemore Mirror Scale"
+                  data-image="./images/equipments/Timemore Mirror Scale/BBJ1493.webp"
+                  data-price="120"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-2">
+            <div class="card text-bg-dark">
+              <img
+                src="./images/equipments/Timemore C2 Pour-over Set With Fish Pure Kettle/BBJ2294.webp"
+                class="card-img"
+                alt="Coffee Image"
+              />
+              <div
+                class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
+              >
+                <h5 class="card-title">
+                  Timemore C2 Pour-over Set With Fish Pure Kettle
+                </h5>
+                <p class="card-text text-clip-2-lines">
+                  The Mirror Scale has a high precision sensor, guaranteeing
+                  accuracy of 0.1g for a reliable brew every time. With a
+                  battery life lasting up to 10 hours and a new
+                  scratch-resistant matte texture, this sleek scale has
+                  everything you need to make the perfect brew while looking
+                  real fine on your countertop.
+                </p>
+                <button
+                  class="btn btn-outline-light add-to-cart"
+                  data-id="E4"
+                  data-name="Timemore C2 Pour-over Set With Fish Pure Kettle"
+                  data-image="./images/equipments/Timemore C2 Pour-over Set With Fish Pure Kettle/BBJ2294.webp"
+                  data-price="90"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -99,9 +260,11 @@
     <div class="bg-main py-2">
       <p class="text-center mb-0">All Right Reserved | Copyright © 2024</p>
     </div>
+
+    <!-- js -->
     <script src="./lib/bootstrap/bootstrap.js"></script>
+    <script src="./lib/fontawsome/fontawsome.js"></script>
     <script src="./lib/jquery/jquery.min.js"></script>
-    <script src="./js/equipments-data.js"></script>
     <script src="./js/equipments.js"></script>
   </body>
 </html>
