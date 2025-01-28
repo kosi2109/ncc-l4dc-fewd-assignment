@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Coffee Equipments</title>
 
     <link href="./lib/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
@@ -25,53 +25,47 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul
-            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-            style="--bs-scroll-height: 100px"
-          >
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="coffee.html">Coffees</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="coffee-equipment.html"
-                >Coffee Equipments</a
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                Shop
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="coffee.html">Coffees</a></li>
+                <li>
+                  <a class="dropdown-item active" href="coffee-equipment.html"
+                    >Coffee Equipments</a
+                  >
+                </li>
+              </ul>
             </li>
+
             <li class="nav-item">
-              <a class="nav-link" href="coffee-equipment.html"
+              <a class="nav-link" href="events-workshops.html"
                 >Events & Workshops</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="coffee-equipment.html"
+              <a class="nav-link" href="specialoffer-subscriptions.html"
                 >Special Offer & Subscriptions</a
               >
             </li>
           </ul>
           <div>
-            <a
-              class="position-relative"
-              style="cursor: pointer; width: fit-content"
-              href="cart.html"
-            >
+            <a class="position-relative cart-link" href="cart.html">
               <div
-                class="position-absolute bg-dark text-white p-1 rounded-circle d-flex justify-content-center align-items-center"
-                style="
-                  width: 20px;
-                  height: 20px;
-                  top: -10px;
-                  right: -10px;
-                  text-decoration: none;
-                "
+                class="position-absolute bg-dark text-white p-1 rounded-circle d-flex justify-content-center align-items-center cart-count"
               >
-                <p
-                  class="pb-0 mb-0"
-                  style="font-size: 10px"
-                  id="cart-count"
-                ></p>
+                <p class="pb-0 mb-0 cart-text" id="cart-count"></p>
               </div>
               <i class="fa-solid fa-cart-shopping fs-5 text-dark"></i>
             </a>
@@ -85,33 +79,54 @@
     <main class="bg-main">
       <!-- hero -->
       <!-- coffee section -->
-      <section class="py-5 container">
+      <section class="pb-5 pt-1 container section-h">
         <h1 class="text-left fs-1">Coffee Equipments</h1>
+
+        <div class="mb-3">
+          <input
+            type="text"
+            id="search-input"
+            class="form-control"
+            placeholder="Search products..."
+          />
+        </div>
+
         <div class="row gap-lg-0" id="coffee-equipments">
-          <div class="col-md-6 col-lg-4 mb-2">
-            <div class="card text-bg-dark">
-              <img
-                src="./images/equipments/Timemore U French Press/30.webp"
-                class="card-img"
-                alt="Coffee Image"
-              />
-              <div
-                class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
-              >
-                <h5 class="card-title">Timemore U French Press</h5>
-                <p class="card-text text-clip-2-lines">
-                  A timeless way to brew coffee with a minimalist touch. The
-                  Timemore French Press features a minimalist sleeve design and
-                  a V-shape spout for a smooth and consistent pour. The sleek
-                  body is easy to grip and is heat-resistant for a comfortable
-                  brewing experience.
-                </p>
+          <div id="no-results-message" class="h-100 mt-5">
+            <p class="text-center fw-semibold">No results found.</p>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-2 product">
+            <div
+              class="border border-dark rounded-2 p-3 bg-dark text-light d-flex flex-column justify-content-between h-100 card-hover"
+            >
+              <div class="ratio ratio-1x1">
+                <img
+                  src="./images/equipments/illy_X2.2_iperEspresso.png"
+                  class="object-fit-cover"
+                  alt="illy X2.2 iperEspresso 2-Group Coffee Machine with Steam Wand"
+                />
+              </div>
+              <p class="mb-1 fs-5">
+                illy X2.2 iperEspresso 2-Group Coffee Machine with Steam Wand
+              </p>
+              <p class="mb-1 fs-6">
+                The X2.2 Iperespresso 2-Group Coffee Machine with Steam Wand is
+                Ideal for businesses. It serves 100 espressos daily, it’s easy
+                to use, and has low maintenance with the premium illy coffee
+                experience. Just insert an iperEspresso capsule and the premium
+                illy espresso brews into the cup without any contact with the
+                machine.
+              </p>
+
+              <div>
+                <p class="fw-semibold mb-1">฿ 62,900</p>
                 <button
-                  class="btn btn-outline-light add-to-cart"
+                  class="btn btn-outline-light add-to-cart w-100"
                   data-id="E1"
-                  data-name="Timemore U French Press"
-                  data-image="./images/equipments/Timemore U French Press/30.webp"
-                  data-price="160"
+                  data-name="illy X2.2 iperEspresso 2-Group Coffee Machine with Steam Wand"
+                  data-image="./images/equipments/illy X2.2 iperEspresso 2-Group.png"
+                  data-price="62900"
                 >
                   Add To Cart
                 </button>
@@ -119,30 +134,37 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-2">
-            <div class="card text-bg-dark">
-              <img
-                src="./images/equipments/Timemore Chestnut C3 Hand Grinder/BBJ1255.webp"
-                class="card-img"
-                alt="Coffee Image"
-              />
-              <div
-                class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
-              >
-                <h5 class="card-title">Timemore Chestnut C3 Hand Grinder</h5>
-                <p class="card-text text-clip-2-lines">
-                  The Timemore Chestnut C3 hand grinder is a fast and furious
-                  beauty. Featuring a full grind range with stepped adjustment
-                  and 38mm conical steel burrs, this small and mighty hand
-                  grinder gives you the flexibility to adjust your grind size
-                  for every type of coffee from espresso to french press.
-                </p>
+          <div class="col-md-6 col-lg-3 mb-2 product">
+            <div
+              class="border border-dark rounded-2 p-3 bg-dark text-light d-flex flex-column justify-content-between h-100 card-hover"
+            >
+              <div class="ratio ratio-1x1">
+                <img
+                  src="./images/equipments/2020_coffee-machines_ese-ground_x1_illy-shop_fondo-trasp.png"
+                  class="object-fit-cover"
+                  alt="illy X1 Anniversary E.S.E. Pod & Ground Coffee Machine (Chromium)"
+                />
+              </div>
+              <p class="mb-1 fs-5">
+                illy X1 Anniversary E.S.E. Pod & Ground Coffee Machine
+                (Chromium)
+              </p>
+              <p class="mb-1 fs-6">
+                The X1 Anniversary E.S.E. Pod & Ground Coffee Machine blends
+                iconic design with sustainability. Save energy and the
+                environment thanks to its energy saving system. X1 can prepare
+                coffee with either our compostable E.S.E. Pods or Ground Coffee
+                of even less waste.
+              </p>
+
+              <div>
+                <p class="fw-semibold mb-1">฿ 42,600</p>
                 <button
-                  class="btn btn-outline-light add-to-cart"
+                  class="btn btn-outline-light add-to-cart w-100"
                   data-id="E2"
-                  data-name="Timemore Chestnut C3 Hand Grinder"
-                  data-image="./images/equipments/Timemore Chestnut C3 Hand Grinder/BBJ1255.webp"
-                  data-price="100"
+                  data-name="illy X1 Anniversary E.S.E. Pod & Ground Coffee Machine (Chromium)"
+                  data-image="./images/equipments/2020_coffee-machines_ese-ground_x1_illy-shop_fondo-trasp.png"
+                  data-price="42600"
                 >
                   Add To Cart
                 </button>
@@ -150,31 +172,35 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-2">
-            <div class="card text-bg-dark">
-              <img
-                src="./images/equipments/Timemore Mirror Scale/BBJ1493.webp"
-                class="card-img"
-                alt="Coffee Image"
-              />
-              <div
-                class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
-              >
-                <h5 class="card-title">Timemore Mirror Scale</h5>
-                <p class="card-text text-clip-2-lines">
-                  The Mirror Scale has a high precision sensor, guaranteeing
-                  accuracy of 0.1g for a reliable brew every time. With a
-                  battery life lasting up to 10 hours and a new
-                  scratch-resistant matte texture, this sleek scale has
-                  everything you need to make the perfect brew while looking
-                  real fine on your countertop.
-                </p>
+          <div class="col-md-6 col-lg-3 mb-2 product">
+            <div
+              class="border border-dark rounded-2 p-3 bg-dark text-light d-flex flex-column justify-content-between h-100 card-hover"
+            >
+              <div class="ratio ratio-1x1">
+                <img
+                  src="./images/equipments/2022_EASY_ESE_MACHINE-FRONT-WHITE.png"
+                  class="object-fit-cover"
+                  alt="illy Easy Coffee Machine For E.S.E. Pods (White)"
+                />
+              </div>
+              <p class="mb-1 fs-5">
+                illy Easy Coffee Machine For E.S.E. Pods (White)
+              </p>
+              <p class="mb-1 fs-6">
+                The new illy E.S.E Coffee machine has two settings, allowing you
+                to choose between an espresso and lungo preparations; the user
+                experience is easy and intuitive. The E.S.E pod is inserted from
+                above and when finished, ejected into a collection drawer.
+              </p>
+
+              <div>
+                <p class="fw-semibold mb-1">฿ 10,700</p>
                 <button
-                  class="btn btn-outline-light add-to-cart"
+                  class="btn btn-outline-light add-to-cart w-100"
                   data-id="E3"
-                  data-name="Timemore Mirror Scale"
-                  data-image="./images/equipments/Timemore Mirror Scale/BBJ1493.webp"
-                  data-price="120"
+                  data-name="illy Easy Coffee Machine For E.S.E. Pods (White)"
+                  data-image="./images/equipments/2022_EASY_ESE_MACHINE-FRONT-WHITE.png"
+                  data-price="10700"
                 >
                   Add To Cart
                 </button>
@@ -182,33 +208,71 @@
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4 mb-2">
-            <div class="card text-bg-dark">
-              <img
-                src="./images/equipments/Timemore C2 Pour-over Set With Fish Pure Kettle/BBJ2294.webp"
-                class="card-img"
-                alt="Coffee Image"
-              />
-              <div
-                class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
-              >
-                <h5 class="card-title">
-                  Timemore C2 Pour-over Set With Fish Pure Kettle
-                </h5>
-                <p class="card-text text-clip-2-lines">
-                  The Mirror Scale has a high precision sensor, guaranteeing
-                  accuracy of 0.1g for a reliable brew every time. With a
-                  battery life lasting up to 10 hours and a new
-                  scratch-resistant matte texture, this sleek scale has
-                  everything you need to make the perfect brew while looking
-                  real fine on your countertop.
-                </p>
+          <div class="col-md-6 col-lg-3 mb-2 product">
+            <div
+              class="border border-dark rounded-2 p-3 bg-dark text-light d-flex flex-column justify-content-between h-100 card-hover"
+            >
+              <div class="ratio ratio-1x1">
+                <img
+                  src="./images/equipments/image-4.png"
+                  class="object-fit-cover"
+                  alt="illy X7.1 iperEspresso Coffee Machine (White)"
+                />
+              </div>
+              <p class="mb-1 fs-5">
+                illy X7.1 iperEspresso Coffee Machine (White)
+              </p>
+              <p class="mb-1 fs-6">
+                The X7.1 Iperespresso machine features advanced technology
+                including steel internal thermoblock, and a Pannarello steam
+                wand that froths milk for creamy cappuccino and latte.
+              </p>
+
+              <div>
+                <p class="fw-semibold mb-1">฿ 17,990</p>
                 <button
-                  class="btn btn-outline-light add-to-cart"
+                  class="btn btn-outline-light add-to-cart w-100"
                   data-id="E4"
-                  data-name="Timemore C2 Pour-over Set With Fish Pure Kettle"
-                  data-image="./images/equipments/Timemore C2 Pour-over Set With Fish Pure Kettle/BBJ2294.webp"
-                  data-price="90"
+                  data-name="illy X7.1 iperEspresso Coffee Machine (White)"
+                  data-image="./images/equipments/image-4.png"
+                  data-price="17990"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-2 product">
+            <div
+              class="border border-dark rounded-2 p-3 bg-dark text-light d-flex flex-column justify-content-between h-100 card-hover"
+            >
+              <div class="ratio ratio-1x1">
+                <img
+                  src="./images/equipments/Y3.3-iperEspresso-Machine.png"
+                  class="object-fit-cover"
+                  alt="
+                  illy Y3.3 iperEspresso Coffee Machine (White)"
+                />
+              </div>
+              <p class="mb-1 fs-5">
+                illy Y3.3 iperEspresso Coffee Machine (White)
+              </p>
+              <p class="mb-1 fs-6">
+                Savor a smooth shot of espresso or rich cup of coffee prepared
+                by this sleek, compact and mimimalistic iperEspresso & coffee
+                capsule machine. A great addition to any kitchen counter.
+              </p>
+
+              <div>
+                <p class="fw-semibold mb-1">฿ 5,452</p>
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="E5"
+                  data-name="
+                  illy Y3.3 iperEspresso Coffee Machine (White)"
+                  data-image="./images/equipments/Y3.3-iperEspresso-Machine.png"
+                  data-price="5452"
                 >
                   Add To Cart
                 </button>
@@ -225,17 +289,37 @@
       <div class="container py-5">
         <div class="row">
           <div class="col-12 col-sm-6 col-md-3">
-            <p class="mb-0 fs-5">Products</p>
+            <p class="mb-0 fs-3">Bean Boutique</p>
             <ul class="ps-2">
-              <li class="list-group-item">Test</li>
+              <li class="list-group-item">FRESHLY ROASTED</li>
             </ul>
           </div>
           <div class="col-12 col-sm-6 col-md-3">
-            <p class="mb-0 fs-5">Category</p>
+            <p class="mb-0 fs-5">Navigation</p>
             <ul class="ps-2">
-              <li class="list-group-item">Category 1</li>
-              <li class="list-group-item">Category 2</li>
-              <li class="list-group-item">Category 3</li>
+              <li class="list-group-item">
+                <a href="/" class="text-white a-link">Home</a>
+              </li>
+              <li class="list-group-item">
+                <a href="./coffee.html" class="text-white a-link">Coffees</a>
+              </li>
+              <li class="list-group-item">
+                <a href="./coffee-equipment.html" class="text-white a-link"
+                  >Coffee Equipemnts</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a href="./events-workshops.html" class="text-white a-link"
+                  >Event & Workshops</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="./specialoffer-subscriptions.html"
+                  class="text-white a-link"
+                  >Special Offer & Subscriptions</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-12 col-sm-6 col-md-3">
@@ -249,8 +333,12 @@
           <div class="col-12 col-sm-6 col-md-3">
             <p class="mb-0 fs-5">Follow US</p>
             <ul class="ps-2">
-              <li class="list-group-item">Facebook</li>
-              <li class="list-group-item">Instragram</li>
+              <li class="list-group-item">
+                <i class="fa-brands fa-facebook me-2"></i> Facebook
+              </li>
+              <li class="list-group-item">
+                <i class="fa-brands fa-instagram me-2"></i> Instragram
+              </li>
             </ul>
           </div>
         </div>
@@ -265,6 +353,7 @@
     <script src="./lib/bootstrap/bootstrap.js"></script>
     <script src="./lib/fontawsome/fontawsome.js"></script>
     <script src="./lib/jquery/jquery.min.js"></script>
-    <script src="./js/equipments.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
   </body>
 </html>

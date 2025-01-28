@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Events & Workshops</title>
 
     <link href="./lib/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
@@ -26,21 +26,30 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul
-            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-            style="--bs-scroll-height: 100px"
-          >
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="coffee.html">Coffees</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="coffee-equipment.html"
-                >Coffee Equipments</a
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                Shop
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="coffee.html">Coffees</a></li>
+                <li>
+                  <a class="dropdown-item" href="coffee-equipment.html"
+                    >Coffee Equipments</a
+                  >
+                </li>
+              </ul>
             </li>
+
             <li class="nav-item">
               <a class="nav-link active" href="events-workshops.html"
                 >Events & Workshops</a
@@ -53,22 +62,14 @@
             </li>
           </ul>
           <div>
-            <div
-              class="position-relative"
-              style="cursor: pointer; width: fit-content"
-            >
+            <a class="position-relative cart-link" href="cart.html">
               <div
-                class="position-absolute bg-dark text-white p-1 rounded-circle d-flex justify-content-center align-items-center"
-                style="width: 20px; height: 20px; top: -10px; right: -10px"
+                class="position-absolute bg-dark text-white p-1 rounded-circle d-flex justify-content-center align-items-center cart-count"
               >
-                <p
-                  class="pb-0 mb-0"
-                  style="font-size: 10px"
-                  id="cart-count"
-                ></p>
+                <p class="pb-0 mb-0 cart-text" id="cart-count"></p>
               </div>
-              <i class="fa-solid fa-cart-shopping fs-5"></i>
-            </div>
+              <i class="fa-solid fa-cart-shopping fs-5 text-dark"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -76,7 +77,7 @@
     <!-- end nav -->
 
     <!-- start main -->
-    <main class="bg-main py-5">
+    <main class="bg-main pb-5 pt-1">
       <section class="container">
         <h1 class="text-left fs-1">Events & Workshops</h1>
 
@@ -87,7 +88,7 @@
                 class="ratio ratio-16x9 rounded-3 overflow-hidden mb-lg-0 mb-2"
               >
                 <img
-                  src="./images/equipments/Timemore C2 Pour-over Set With Fish Pure Kettle/BBJ2279.webp"
+                  src="./images/DSC_0866+2.jpeg"
                   alt=""
                   class="w-100 h-100 object-fit-cover"
                 />
@@ -96,22 +97,26 @@
           </div>
           <div class="col-lg-6">
             <div class="d-flex flex-column justify-content-center h-100">
-              <h2 class="fs-3">Innovative Booth Designs</h2>
+              <h2 class="fs-3">
+                Let’s learn how to taste coffee & unpack where its flavours come
+                from!
+              </h2>
               <p class="fs-5">
-                Our booth designs are crafted to attract attention and provide a
-                welcoming space for attendees to learn about your brand.
+                Learn how to get the most of your beans using an espresso
+                machine, and pour beautiful latte art!
               </p>
               <ul class="fs-6">
                 <li>
-                  Custom booth designs that reflect your brand identity and
-                  message.
+                  Basic espresso brewing principles and how to 'dial-in' a
+                  coffee to your preferred recipe
                 </li>
                 <li>
-                  Modular and scalable designs that fit any exhibition space.
+                  Learn how to steam milk to achieve a silky smooth texture,
+                  pour delicious drinks and practice latte art patterns.
                 </li>
                 <li>
-                  Interactive elements that engage visitors and encourage
-                  participation.
+                  Take home a bag of coffee of your choice to practice your
+                  freshly gained barista skills.
                 </li>
               </ul>
               <a class="btn btn-outline-dark" href="#register">Register Now</a>
@@ -122,22 +127,25 @@
         <div class="row mb-5">
           <div class="col-lg-6 order-lg-1 order-2">
             <div class="d-flex flex-column justify-content-center h-100">
-              <h2 class="fs-3">Innovative Booth Designs</h2>
+              <h2 class="fs-3">
+                CUPPING CLUB : Rwanda Talk & Pre-shipment Cupping
+              </h2>
               <p class="fs-5">
-                Our booth designs are crafted to attract attention and provide a
-                welcoming space for attendees to learn about your brand.
+                Our open cuppings - aka guided coffee tastings - are free to
+                attend and open to all. The beauty of coffee cuppings is that
+                there's always something to learn no matter your level of
+                experience.
               </p>
               <ul class="fs-6">
                 <li>
-                  Custom booth designs that reflect your brand identity and
-                  message.
+                  Chance to taste various different coffees side by side,
+                  develop your sensory skills and learn more about processes and
+                  producers.
                 </li>
                 <li>
-                  Modular and scalable designs that fit any exhibition space.
-                </li>
-                <li>
-                  Interactive elements that engage visitors and encourage
-                  participation.
+                  Taste a full table of Rwandan delights some of which are
+                  currently on the way to the roastery and will be released
+                  later on in the year.
                 </li>
               </ul>
               <a class="btn btn-outline-dark" href="#register">Register Now</a>
@@ -149,85 +157,7 @@
                 class="ratio ratio-16x9 rounded-3 overflow-hidden mb-lg-0 mb-2"
               >
                 <img
-                  src="./images/equipments/Timemore C2 Pour-over Set With Fish Pure Kettle/BBJ2279.webp"
-                  alt=""
-                  class="w-100 h-100 object-fit-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mb-5">
-          <div class="col-lg-6">
-            <div class="d-flex justify-content-center align-items-center h-100">
-              <div
-                class="ratio ratio-16x9 rounded-3 overflow-hidden mb-lg-0 mb-2"
-              >
-                <img
-                  src="./images/equipments/Timemore C2 Pour-over Set With Fish Pure Kettle/BBJ2279.webp"
-                  alt=""
-                  class="w-100 h-100 object-fit-cover"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="d-flex flex-column justify-content-center h-100">
-              <h2 class="fs-3">Innovative Booth Designs</h2>
-              <p class="fs-5">
-                Our booth designs are crafted to attract attention and provide a
-                welcoming space for attendees to learn about your brand.
-              </p>
-              <ul class="fs-6">
-                <li>
-                  Custom booth designs that reflect your brand identity and
-                  message.
-                </li>
-                <li>
-                  Modular and scalable designs that fit any exhibition space.
-                </li>
-                <li>
-                  Interactive elements that engage visitors and encourage
-                  participation.
-                </li>
-              </ul>
-              <a class="btn btn-outline-dark" href="#register">Register Now</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mb-5">
-          <div class="col-lg-6 order-lg-1 order-2">
-            <div class="d-flex flex-column justify-content-center h-100">
-              <h2 class="fs-3">Innovative Booth Designs</h2>
-              <p class="fs-5">
-                Our booth designs are crafted to attract attention and provide a
-                welcoming space for attendees to learn about your brand.
-              </p>
-              <ul class="fs-6">
-                <li>
-                  Custom booth designs that reflect your brand identity and
-                  message.
-                </li>
-                <li>
-                  Modular and scalable designs that fit any exhibition space.
-                </li>
-                <li>
-                  Interactive elements that engage visitors and encourage
-                  participation.
-                </li>
-              </ul>
-              <a class="btn btn-outline-dark" href="#register">Register Now</a>
-            </div>
-          </div>
-          <div class="col-lg-6 order-lg-2 order-1">
-            <div class="d-flex justify-content-center align-items-center h-100">
-              <div
-                class="ratio ratio-16x9 rounded-3 overflow-hidden mb-lg-0 mb-2"
-              >
-                <img
-                  src="./images/equipments/Timemore C2 Pour-over Set With Fish Pure Kettle/BBJ2279.webp"
+                  src="./images/RwandaEvent_EventbriteBanner_V2_241023.jpg"
                   alt=""
                   class="w-100 h-100 object-fit-cover"
                 />
@@ -240,16 +170,29 @@
       <section class="container" id="register">
         <div class="bg-dark p-5 rounded-3">
           <h1 class="text-left fs-1 text-light">Register</h1>
-          <form action="" class="text-light">
+          <form
+            class="text-light"
+            id="emailForm"
+            onsubmit="return openEmail();"
+          >
             <div class="row">
               <div class="col-lg-6">
                 <div class="mb-3">
-                  <label for="name" class="form-label">Name</label>
+                  <label for="first_name" class="form-label">First Name</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="name"
-                    placeholder="Enter your name"
+                    id="first_name"
+                    placeholder="Enter your First Name"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="last_name" class="form-label">Last Name</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="last_name"
+                    placeholder="Enter your Last Name"
                   />
                 </div>
                 <div class="mb-3">
@@ -259,15 +202,6 @@
                     class="form-control"
                     id="email"
                     placeholder="Enter your email"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="phone" class="form-label">Phone</label>
-                  <input
-                    type="tel"
-                    class="form-control"
-                    id="phone"
-                    placeholder="Enter your phone number"
                   />
                 </div>
               </div>
@@ -295,17 +229,37 @@
       <div class="container py-5">
         <div class="row">
           <div class="col-12 col-sm-6 col-md-3">
-            <p class="mb-0 fs-5">Products</p>
+            <p class="mb-0 fs-3">Bean Boutique</p>
             <ul class="ps-2">
-              <li class="list-group-item">Test</li>
+              <li class="list-group-item">FRESHLY ROASTED</li>
             </ul>
           </div>
           <div class="col-12 col-sm-6 col-md-3">
-            <p class="mb-0 fs-5">Category</p>
+            <p class="mb-0 fs-5">Navigation</p>
             <ul class="ps-2">
-              <li class="list-group-item">Category 1</li>
-              <li class="list-group-item">Category 2</li>
-              <li class="list-group-item">Category 3</li>
+              <li class="list-group-item">
+                <a href="/" class="text-white a-link">Home</a>
+              </li>
+              <li class="list-group-item">
+                <a href="./coffee.html" class="text-white a-link">Coffees</a>
+              </li>
+              <li class="list-group-item">
+                <a href="./coffee-equipment.html" class="text-white a-link"
+                  >Coffee Equipemnts</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a href="./events-workshops.html" class="text-white a-link"
+                  >Event & Workshops</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="./specialoffer-subscriptions.html"
+                  class="text-white a-link"
+                  >Special Offer & Subscriptions</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-12 col-sm-6 col-md-3">
@@ -319,8 +273,12 @@
           <div class="col-12 col-sm-6 col-md-3">
             <p class="mb-0 fs-5">Follow US</p>
             <ul class="ps-2">
-              <li class="list-group-item">Facebook</li>
-              <li class="list-group-item">Instragram</li>
+              <li class="list-group-item">
+                <i class="fa-brands fa-facebook me-2"></i> Facebook
+              </li>
+              <li class="list-group-item">
+                <i class="fa-brands fa-instagram me-2"></i> Instragram
+              </li>
             </ul>
           </div>
         </div>
@@ -333,6 +291,8 @@
     <script src="./lib/bootstrap/bootstrap.js"></script>
     <script src="./lib/fontawsome/fontawsome.js"></script>
     <script src="./lib/jquery/jquery.min.js"></script>
-    <script src="./js/equipments.js"></script>
+    <script src="./lib/scrollReveal/scrollreveal.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
   </body>
 </html>

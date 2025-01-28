@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Coffees</title>
 
     <link href="./lib/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
   </head>
   <body>
     <!-- start nav -->
-    <nav class="navbar navbar-expand-md sticky-top bg-body-tertiary bg-main">
+    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary bg-main">
       <div class="container">
         <a class="navbar-brand" href="index.html">Bean Boutique</a>
         <button
@@ -25,22 +25,53 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul
-            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-            style="--bs-scroll-height: 100px"
-          >
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Shop
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item active" href="coffee.html">Coffees</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="coffee-equipment.html"
+                    >Coffee Equipments</a
+                  >
+                </li>
+              </ul>
+            </li>
+
             <li class="nav-item">
-              <a class="nav-link active" href="coffee.html">Coffees</a>
+              <a class="nav-link" href="events-workshops.html"
+                >Events & Workshops</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="coffee-equipment.html"
-                >Coffee Equipments</a
+              <a class="nav-link" href="specialoffer-subscriptions.html"
+                >Special Offer & Subscriptions</a
               >
             </li>
           </ul>
+          <div>
+            <a class="position-relative cart-link" href="cart.html">
+              <div
+                class="position-absolute bg-dark text-white p-1 rounded-circle d-flex justify-content-center align-items-center cart-count"
+              >
+                <p class="pb-0 mb-0 cart-text" id="cart-count"></p>
+              </div>
+              <i class="fa-solid fa-cart-shopping fs-5 text-dark"></i>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
@@ -51,144 +82,315 @@
       <!-- hero -->
 
       <!-- coffee section -->
-      <section class="py-5 container">
-        <!-- <div
-          class="d-flex flex-column justify-content-center align-items-center text-center"
-        >
-          <h3 class="fs-2">Coffee</h3>
-          <p class="fs-6">Explore The Recent Most Bought Coffee This Week</p>
-        </div> -->
-        <div class="container">
-          <div class="row gap-lg-0">
-            <div class="col-md-6 col-lg-4 mb-2">
-              <div class="card text-bg-dark">
-                <img
-                  src="./images/coffee/OrganicGuatemala-01.webp"
-                  class="card-img"
-                  alt="Coffee Image"
-                />
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
-                >
-                  <h5 class="card-title">
-                    Guatemala Organic Single Origin Coffee
-                  </h5>
-                  <p class="card-text text-clip-2-lines">
-                    You'll savor the smoky robust flavor of our Guatemala
-                    Organic single origin ground coffee.
-                  </p>
-                  <a href="#" class="float-end text-white">View</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-2">
-              <div class="card text-bg-dark">
-                <img
-                  src="./images/coffee/OrganicSumatra-11.webp"
-                  class="card-img"
-                  alt="Coffee Image"
-                />
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
-                >
-                  <h5 class="card-title">Sumatra Organic Dark Single Origin</h5>
-                  <p class="card-text text-clip-2-lines">
-                    One taste of our Sumatra Mandheling Organic single origin
-                    dark roast whole bean coffee and you'll discover a sweet
-                    malty flavor with a caramel finish and a deep aroma.
-                  </p>
-                  <a href="#" class="float-end text-white">View</a>
-                </div>
-              </div>
-            </div>
+      <section class="pb-5 pt-1 container section-h">
+        <h1 class="text-left fs-1">Coffees</h1>
+        <div class="mb-3">
+          <input
+            type="text"
+            id="search-input"
+            class="form-control"
+            placeholder="Search products..."
+          />
+        </div>
 
-            <div class="col-md-6 col-lg-4 mb-2">
-              <div class="card text-bg-dark">
-                <img
-                  src="./images/coffee/E-Comm_CoffeeBagVisuals_16oz_131124-11.webp"
-                  class="card-img"
-                  alt="Coffee Image"
-                />
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
-                >
-                  <h5 class="card-title">
-                    Brazil Cerrado Single Origin Coffee
-                  </h5>
-                  <p class="card-text text-clip-2-lines">
-                    A giant of worldwide coffee production, Brazil produces not
-                    only the most coffee, it also grows some of the best. Our
-                    Brazil Cerrado light roast single origin coffee is grown in
-                    the hot, flat savannahs of Minas Gerais.
-                  </p>
-                  <a href="#" class="float-end text-white">View</a>
-                </div>
-              </div>
-            </div>
+        <div class="row gap-lg-0">
+          <div id="no-results-message" class="h-100 mt-5">
+            <p class="text-center fw-semibold">No results found.</p>
+          </div>
 
-            <div class="col-md-6 col-lg-4 mb-2">
-              <div class="card text-bg-dark">
+          <div class="col-md-6 col-lg-3 mb-2 product">
+            <div
+              class="border border-dark rounded-2 p-3 bg-dark text-light h-100 d-flex flex-column justify-content-between card-hover"
+            >
+              <div class="ratio ratio-1x1">
                 <img
-                  src="./images/coffee/OrganicGuatemala-01.webp"
-                  class="card-img"
-                  alt="Coffee Image"
+                  src="./images/coffee/illy-medium-roast.png"
+                  class="object-fit-cover"
+                  alt="illy Classico iperEspresso Coffee Capsules – Medium Roast
+                    (Pack of 21)"
                 />
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
-                >
-                  <h5 class="card-title">
-                    Guatemala Organic Single Origin Coffee
-                  </h5>
-                  <p class="card-text text-clip-2-lines">
-                    You'll savor the smoky robust flavor of our Guatemala
-                    Organic single origin ground coffee.
-                  </p>
-                  <a href="#" class="float-end text-white">View</a>
-                </div>
               </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-2">
-              <div class="card text-bg-dark">
-                <img
-                  src="./images/coffee/OrganicSumatra-11.webp"
-                  class="card-img"
-                  alt="Coffee Image"
-                />
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
-                >
-                  <h5 class="card-title">Sumatra Organic Dark Single Origin</h5>
-                  <p class="card-text text-clip-2-lines">
-                    One taste of our Sumatra Mandheling Organic single origin
-                    dark roast whole bean coffee and you'll discover a sweet
-                    malty flavor with a caramel finish and a deep aroma.
-                  </p>
-                  <a href="#" class="float-end text-white">View</a>
-                </div>
-              </div>
-            </div>
+              <p class="mb-1 fs-5">
+                illy Classico iperEspresso Coffee Capsules – Medium Roast (Pack
+                of 21)
+              </p>
+              <p class="mb-1 fs-6">
+                Discover our iperEspresso Coffee Capsules Medium Roast with
+                Combining the aroma of chocolate, toast, and caramel.
+              </p>
 
-            <div class="col-md-6 col-lg-4 mb-2">
-              <div class="card text-bg-dark">
-                <img
-                  src="./images/coffee/E-Comm_CoffeeBagVisuals_16oz_131124-11.webp"
-                  class="card-img"
-                  alt="Coffee Image"
-                />
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
+              <div>
+                <p class="fw-semibold mb-1">฿ 864</p>
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="C1"
+                  data-name="illy Classico iperEspresso Coffee Capsules – Medium Roast
+                    (Pack of 21)"
+                  data-image="./images/coffee/illy-medium-roast.png"
+                  data-price="864"
                 >
-                  <h5 class="card-title">
-                    Brazil Cerrado Single Origin Coffee
-                  </h5>
-                  <p class="card-text text-clip-2-lines">
-                    A giant of worldwide coffee production, Brazil produces not
-                    only the most coffee, it also grows some of the best. Our
-                    Brazil Cerrado light roast single origin coffee is grown in
-                    the hot, flat savannahs of Minas Gerais.
-                  </p>
-                  <a href="#" class="float-end text-white">View</a>
-                </div>
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-2 product">
+            <div
+              class="border border-dark rounded-2 p-3 bg-dark text-light h-100 d-flex flex-column justify-content-between card-hover"
+            >
+              <div class="ratio ratio-1x1">
+                <img
+                  src="./images/coffee/illy-dark-roast.png"
+                  class="object-fit-cover"
+                  alt="illy Intenso iperEspresso Coffee Capsules – Dark Roast (Pack of 21)"
+                />
+              </div>
+              <p class="mb-1 fs-5">
+                illy Intenso iperEspresso Coffee Capsules – Dark Roast (Pack of
+                21)
+              </p>
+              <p class="mb-1 fs-6">
+                Discover our illy Intenso iperEspresso Coffee Capsules, bold
+                roast coffee has a pleasantly robust finish, with warm notes of
+                cocoa and dried fruit
+              </p>
+
+              <div>
+                <p class="fw-semibold mb-1">฿ 846</p>
+
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="C2"
+                  data-name="illy Intenso iperEspresso Coffee Capsules – Dark Roast (Pack
+                    of 21)"
+                  data-image="./images/coffee/illy-dark-roast.png"
+                  data-price="846"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-2 product">
+            <div
+              class="border border-dark rounded-2 p-3 bg-dark text-light h-100 d-flex flex-column justify-content-between card-hover"
+            >
+              <div class="ratio ratio-1x1">
+                <img
+                  src="./images/coffee/illy-decaffeinated.png"
+                  class="object-fit-cover"
+                  alt="illy Decaffeinated Classico iperEspresso Coffee Capsules – Medium Roast (Pack of 21)"
+                />
+              </div>
+              <p class="mb-1 fs-5">
+                illy Decaffeinated Classico iperEspresso Coffee Capsules –
+                Medium Roast (Pack of 21)
+              </p>
+              <p class="mb-1 fs-6">
+                The medium blend features a rich and balanced taste with notes
+                of caramel and chocolate. illy uses a C02 method, and never
+                chemicals, to decaffeinate coffee.
+              </p>
+
+              <div>
+                <p class="fw-semibold mb-1">฿ 846</p>
+
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="C3"
+                  data-name="illy Decaffeinated Classico iperEspresso Coffee Capsules –
+                    Medium Roast (Pack of 21)"
+                  data-image="./images/coffee/illy-decaffeinated.png"
+                  data-price="846"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-2 product">
+            <div
+              class="border border-dark rounded-2 p-3 bg-dark text-light h-100 d-flex flex-column justify-content-between card-hover"
+            >
+              <div class="ratio ratio-1x1">
+                <img
+                  src="./images/coffee/illy_classico.png"
+                  class="object-fit-cover"
+                  alt="illy Classico iperEspresso Coffee Capsules Flowpack – Medium Roast (Pack of 100)"
+                />
+              </div>
+              <p class="mb-1 fs-5">
+                illy Classico iperEspresso Coffee Capsules Flowpack – Medium
+                Roast (Pack of 100)
+              </p>
+              <p class="mb-1 fs-6">
+                Discover our iperEspresso Coffee Capsules Medium Roast with
+                Combining the aroma of chocolate, toast, and caramel.
+              </p>
+
+              <div>
+                <p class="fw-semibold mb-1">฿ 4,266</p>
+
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="C4"
+                  data-name="illy Classico iperEspresso Coffee Capsules Flowpack – Medium
+                    Roast (Pack of 100)"
+                  data-image="./images/coffee/illy Classico.png"
+                  data-price="4266"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-2 product">
+            <div
+              class="border border-dark rounded-2 p-3 bg-dark text-light h-100 d-flex flex-column justify-content-between card-hover"
+            >
+              <div class="ratio ratio-1x1">
+                <img
+                  src="./images/coffee/illy_whole_bean.png"
+                  class="object-fit-cover"
+                  alt="illy Whole Bean Classico Coffee – Medium Roast (250 Grams)"
+                />
+              </div>
+              <p class="mb-1 fs-5">
+                illy Whole Bean Classico Coffee – Medium Roast (250 Grams)
+              </p>
+              <p class="mb-1 fs-6">
+                8.8oz cans of medium roast whole coffee beans. Our illy Whole
+                Bean Classico has a lingering sweetness and delicate notes of
+                caramel, orange blossom and jasmine for a winning and harmonious
+                blend.
+              </p>
+
+              <div>
+                <p class="fw-semibold mb-1">฿ 759</p>
+
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="C5"
+                  data-name="illy Whole Bean Classico Coffee – Medium Roast (250 Grams)"
+                  data-image="./images/coffee/illy Whole Bean.png"
+                  data-price="759"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-2 product">
+            <div
+              class="border border-dark rounded-2 p-3 bg-dark text-light h-100 d-flex flex-column justify-content-between card-hover"
+            >
+              <div class="ratio ratio-1x1">
+                <img
+                  src="./images/coffee/illy_whole_beans_arabica.png"
+                  class="object-fit-cover"
+                  alt="illy Whole Beans Arabica Selection Brazil Coffee – Medium Roast (250 Grams)"
+                />
+              </div>
+              <p class="mb-1 fs-5">
+                illy Whole Beans Arabica Selection Brazil Coffee – Medium Roast
+                (250 Grams)
+              </p>
+              <p class="mb-1 fs-6">
+                250 grams cans of medium roast whole coffee beans. Our illy
+                Whole Arabica Selection Brazil Beans has a Caramel Notes,
+                Intense.
+              </p>
+
+              <div>
+                <p class="fw-semibold mb-1">฿ 759</p>
+
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="C6"
+                  data-name="illy Whole Beans Arabica Selection Brazil Coffee – Medium
+                    Roast (250 Grams)"
+                  data-image="./images/coffee/illy Whole Beans Arabica.png"
+                  data-price="759"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-2 product">
+            <div
+              class="border border-dark rounded-2 p-3 bg-dark text-light h-100 d-flex flex-column justify-content-between card-hover"
+            >
+              <div class="ratio ratio-1x1">
+                <img
+                  src="./images/coffee/illy_whole_beans_arabica_selection.png"
+                  class="object-fit-cover"
+                  alt="illy Whole Beans Arabica Selection India Coffee – Medium Roast (250 Grams)"
+                />
+              </div>
+              <p class="mb-1 fs-5">
+                illy Whole Beans Arabica Selection India Coffee – Medium Roast
+                (250 Grams)
+              </p>
+              <p class="mb-1 fs-6">
+                250 grams cans of medium roast whole coffee beans.
+              </p>
+
+              <div>
+                <p class="fw-semibold mb-1">฿ 759</p>
+
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="C7"
+                  data-name="illy Whole Beans Arabica Selection India Coffee – Medium Roast
+                    (250 Grams)"
+                  data-image="./images/coffee/illy Whole Beans Arabica Selection.png"
+                  data-price="759"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 mb-2 product">
+            <div
+              class="border border-dark rounded-2 p-3 bg-dark text-light h-100 d-flex flex-column justify-content-between card-hover"
+            >
+              <div class="ratio ratio-1x1">
+                <img
+                  src="./images/coffee/image-57-2.png"
+                  class="object-fit-cover"
+                  alt="illy Ground Classico Instant Coffee – Medium Roast (95 Grams)"
+                />
+              </div>
+              <p class="mb-1 fs-5">
+                illy Ground Classico Instant Coffee – Medium Roast (95 Grams)
+              </p>
+              <p class="mb-1 fs-6">
+                Gives you the great, bold taste of illy Ground Classico Instant
+                Coffee – Medium Roast (95 Grams) in an ultra-convenient instant
+                format.
+              </p>
+
+              <div>
+                <p class="fw-semibold mb-1">฿ 531</p>
+
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="C8"
+                  data-name="illy Ground Classico Instant Coffee – Medium Roast (95 Grams)"
+                  data-image="./images/coffee/image-57-2.png"
+                  data-price="531"
+                >
+                  Add To Cart
+                </button>
               </div>
             </div>
           </div>
@@ -202,17 +404,37 @@
       <div class="container py-5">
         <div class="row">
           <div class="col-12 col-sm-6 col-md-3">
-            <p class="mb-0 fs-5">Products</p>
+            <p class="mb-0 fs-3">Bean Boutique</p>
             <ul class="ps-2">
-              <li class="list-group-item">Test</li>
+              <li class="list-group-item">FRESHLY ROASTED</li>
             </ul>
           </div>
           <div class="col-12 col-sm-6 col-md-3">
-            <p class="mb-0 fs-5">Category</p>
+            <p class="mb-0 fs-5">Navigation</p>
             <ul class="ps-2">
-              <li class="list-group-item">Category 1</li>
-              <li class="list-group-item">Category 2</li>
-              <li class="list-group-item">Category 3</li>
+              <li class="list-group-item">
+                <a href="/" class="text-white a-link">Home</a>
+              </li>
+              <li class="list-group-item">
+                <a href="./coffee.html" class="text-white a-link">Coffees</a>
+              </li>
+              <li class="list-group-item">
+                <a href="./coffee-equipment.html" class="text-white a-link"
+                  >Coffee Equipemnts</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a href="./events-workshops.html" class="text-white a-link"
+                  >Event & Workshops</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="./specialoffer-subscriptions.html"
+                  class="text-white a-link"
+                  >Special Offer & Subscriptions</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-12 col-sm-6 col-md-3">
@@ -226,8 +448,12 @@
           <div class="col-12 col-sm-6 col-md-3">
             <p class="mb-0 fs-5">Follow US</p>
             <ul class="ps-2">
-              <li class="list-group-item">Facebook</li>
-              <li class="list-group-item">Instragram</li>
+              <li class="list-group-item">
+                <i class="fa-brands fa-facebook me-2"></i> Facebook
+              </li>
+              <li class="list-group-item">
+                <i class="fa-brands fa-instagram me-2"></i> Instragram
+              </li>
             </ul>
           </div>
         </div>
@@ -238,5 +464,61 @@
       <p class="text-center mb-0">All Right Reserved | Copyright © 2024</p>
     </div>
     <script src="./lib/bootstrap/bootstrap.js"></script>
+    <script src="./lib/fontawsome/fontawsome.js"></script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/scrollReveal/scrollreveal.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        // Function to filter products
+        const filterProducts = () => {
+          const searchInput = $("#search-input").val().toLowerCase();
+          let foundCount = 0; // Track the number of products found
+
+          $(".product").each(function () {
+            const productName = $(this).find("p:first").text().toLowerCase();
+            const productDescription = $(this)
+              .find("p:nth-of-type(2)")
+              .text()
+              .toLowerCase();
+
+            const regex = new RegExp(searchInput, "i");
+
+            const isMatch =
+              searchInput.length === 0 ||
+              regex.test(productName) ||
+              regex.test(productDescription);
+
+            if (isMatch) {
+              $(this).removeClass("hidden");
+              foundCount++; // Increment the match count
+            } else {
+              $(this).addClass("hidden");
+            }
+
+            // Show or hide the "No results found" message
+            if (foundCount === 0 && searchInput.length > 0) {
+              $("#no-results-message").show(); // Show message if no results
+            } else {
+              $("#no-results-message").hide(); // Hide message if results found
+            }
+          });
+        };
+
+        // Add event listener to the search input
+        $("#search-input").on("input", function () {
+          filterProducts();
+        });
+
+        // Re-bind event listeners after rendering
+        const renderProducts = () => {
+          filterProducts(); // Apply filtering logic
+        };
+
+        renderProducts(); // Initial render
+      });
+    </script>
   </body>
 </html>

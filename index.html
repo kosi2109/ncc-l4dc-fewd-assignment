@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home</title>
 
     <link href="./lib/bootstrap/bootstrap.css" rel="stylesheet" />
     <link href="./css/main.css" rel="stylesheet" />
@@ -26,23 +26,32 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul
-            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
-            style="--bs-scroll-height: 100px"
-          >
+          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="index.html"
                 >Home</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="coffee.html">Coffees</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="coffee-equipment.html"
-                >Coffee Equipments</a
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                Shop
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="coffee.html">Coffees</a></li>
+                <li>
+                  <a class="dropdown-item" href="coffee-equipment.html"
+                    >Coffee Equipments</a
+                  >
+                </li>
+              </ul>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="events-workshops.html"
                 >Events & Workshops</a
@@ -55,22 +64,14 @@
             </li>
           </ul>
           <div>
-            <div
-              class="position-relative"
-              style="cursor: pointer; width: fit-content"
-            >
+            <a class="position-relative cart-link" href="cart.html">
               <div
-                class="position-absolute bg-dark text-white p-1 rounded-circle d-flex justify-content-center align-items-center"
-                style="width: 20px; height: 20px; top: -10px; right: -10px"
+                class="position-absolute bg-dark text-white p-1 rounded-circle d-flex justify-content-center align-items-center cart-count"
               >
-                <p
-                  class="pb-0 mb-0"
-                  style="font-size: 10px"
-                  id="cart-count"
-                ></p>
+                <p class="pb-0 mb-0 cart-text" id="cart-count"></p>
               </div>
-              <i class="fa-solid fa-cart-shopping fs-5"></i>
-            </div>
+              <i class="fa-solid fa-cart-shopping fs-5 text-dark"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -85,8 +86,7 @@
           <img src="./images/topwave.png" alt="Top Wave" class="w-100" />
         </div> -->
         <div
-          class="position-absolute start-0 w-100 z-1 pe-none"
-          style="bottom: -10px"
+          class="position-absolute start-0 w-100 z-1 pe-none bottom-hero-image"
         >
           <img src="./images/bottomwave.png" alt="Bottom Wave" class="w-100" />
         </div>
@@ -95,7 +95,7 @@
           <div class="row">
             <div class="col-12 col-md-6">
               <div
-                class="h-100 d-flex flex-column justify-content-center align-items-center align-items-md-start h-full py-3"
+                class="h-100 d-flex flex-column justify-content-center align-items-center align-items-md-start h-full py-3 hero-text"
               >
                 <h2 class="fs-5 text-sec">FRESHLY ROASTED</h2>
                 <h1 class="fs-2 text-main">COFFEE BY</h1>
@@ -106,7 +106,9 @@
               </div>
             </div>
             <div class="col-12 col-md-6">
-              <div class="d-flex justify-content-center align-items-center">
+              <div
+                class="d-flex justify-content-center align-items-center hero-img"
+              >
                 <img
                   src="./images/hero_coffee.png"
                   alt="Coffee Bean With Cup Image"
@@ -128,69 +130,127 @@
         </div>
         <div class="container">
           <div class="row gap-lg-0">
-            <div class="col-md-6 col-lg-4 mb-2">
-              <div class="card text-bg-dark">
-                <img
-                  src="./images/coffee/OrganicGuatemala-01.webp"
-                  class="card-img"
-                  alt="Coffee Image"
-                />
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
-                >
-                  <h5 class="card-title">
-                    Guatemala Organic Single Origin Coffee
-                  </h5>
-                  <p class="card-text text-clip-2-lines">
-                    You'll savor the smoky robust flavor of our Guatemala
-                    Organic single origin ground coffee.
-                  </p>
-                  <a href="#" class="float-end text-white">View</a>
+            <div class="col-md-6 col-lg-3 mb-2 product">
+              <div
+                class="border border-dark rounded-2 p-3 bg-dark text-light d-flex flex-column justify-content-between card-hover slide-up"
+              >
+                <div class="ratio ratio-1x1">
+                  <img
+                    src="./images/coffee/illy-medium-roast.png"
+                    class="object-fit-cover"
+                    alt="illy Classico iperEspresso Coffee Capsules – Medium Roast
+                    (Pack of 21)"
+                  />
                 </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-2">
-              <div class="card text-bg-dark">
-                <img
-                  src="./images/coffee/OrganicSumatra-11.webp"
-                  class="card-img"
-                  alt="Coffee Image"
-                />
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
+                <p class="mb-1">
+                  illy Classico iperEspresso Coffee Capsules – Medium Roast
+                  (Pack of 21)
+                </p>
+
+                <p class="fw-semibold mb-1">฿ 864</p>
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="C1"
+                  data-name="illy Classico iperEspresso Coffee Capsules – Medium Roast
+                    (Pack of 21)"
+                  data-image="./images/coffee/illy-medium-roast.png"
+                  data-price="864"
                 >
-                  <h5 class="card-title">Sumatra Organic Dark Single Origin</h5>
-                  <p class="card-text text-clip-2-lines">
-                    One taste of our Sumatra Mandheling Organic single origin
-                    dark roast whole bean coffee and you'll discover a sweet
-                    malty flavor with a caramel finish and a deep aroma.
-                  </p>
-                  <a href="#" class="float-end text-white">View</a>
-                </div>
+                  Add To Cart
+                </button>
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-4 mb-2 d-none d-lg-block">
-              <div class="card text-bg-dark">
-                <img
-                  src="./images/coffee/E-Comm_CoffeeBagVisuals_16oz_131124-11.webp"
-                  class="card-img"
-                  alt="Coffee Image"
-                />
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark"
-                >
-                  <h5 class="card-title">
-                    Brazil Cerrado Single Origin Coffee
-                  </h5>
-                  <p class="card-text text-clip-2-lines">
-                    A giant of worldwide coffee production, Brazil produces not
-                    only the most coffee, it also grows some of the best. Our
-                    Brazil Cerrado light roast single origin coffee is grown in
-                    the hot, flat savannahs of Minas Gerais.
-                  </p>
-                  <a href="#" class="float-end text-white">View</a>
+            <div class="col-md-6 col-lg-3 mb-2 product">
+              <div
+                class="border border-dark rounded-2 p-3 bg-dark text-light h-100 d-flex flex-column justify-content-between card-hover slide-up"
+              >
+                <div class="ratio ratio-1x1">
+                  <img
+                    src="./images/coffee/illy-dark-roast.png"
+                    class="object-fit-cover"
+                    alt="illy Intenso iperEspresso Coffee Capsules – Dark Roast (Pack of 21)"
+                  />
                 </div>
+                <p class="mb-1">
+                  illy Intenso iperEspresso Coffee Capsules – Dark Roast (Pack
+                  of 21)
+                </p>
+
+                <p class="fw-semibold mb-1">฿ 846</p>
+
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="C2"
+                  data-name="illy Intenso iperEspresso Coffee Capsules – Dark Roast (Pack
+                    of 21)"
+                  data-image="./images/coffee/illy-dark-roast.png"
+                  data-price="846"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-2 product">
+              <div
+                class="border border-dark rounded-2 p-3 bg-dark text-light h-100 d-flex flex-column justify-content-between card-hover slide-up"
+              >
+                <div class="ratio ratio-1x1">
+                  <img
+                    src="./images/coffee/illy-decaffeinated.png"
+                    class="object-fit-cover"
+                    alt="illy Decaffeinated Classico iperEspresso Coffee Capsules – Medium Roast (Pack of 21)"
+                  />
+                </div>
+                <p class="mb-1">
+                  illy Decaffeinated Classico iperEspresso Coffee Capsules –
+                  Medium Roast (Pack of 21)
+                </p>
+
+                <p class="fw-semibold mb-1">฿ 846</p>
+
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="C3"
+                  data-name="illy Decaffeinated Classico iperEspresso Coffee Capsules –
+                    Medium Roast (Pack of 21)"
+                  data-image="./images/coffee/illy-decaffeinated.png"
+                  data-price="846"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-2 product">
+              <div
+                class="border border-dark rounded-2 p-3 bg-dark text-light h-100 d-flex flex-column justify-content-between card-hover slide-up"
+              >
+                <div class="ratio ratio-1x1">
+                  <img
+                    src="./images/coffee/illy_classico.png"
+                    class="object-fit-cover"
+                    alt="illy Classico iperEspresso Coffee Capsules Flowpack – Medium Roast (Pack of 100)"
+                  />
+                </div>
+                <p class="mb-1">
+                  illy Classico iperEspresso Coffee Capsules Flowpack – Medium
+                  Roast (Pack of 100)
+                </p>
+
+                <p class="fw-semibold mb-1">฿ 4,266</p>
+
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="C4"
+                  data-name="illy Classico iperEspresso Coffee Capsules Flowpack – Medium
+                    Roast (Pack of 100)"
+                  data-image="./images/coffee/illy Classico.png"
+                  data-price="4266"
+                >
+                  Add To Cart
+                </button>
               </div>
             </div>
           </div>
@@ -264,139 +324,178 @@
           class="d-flex flex-column justify-content-center align-items-center text-center"
         >
           <h3 class="fs-2">Equipment</h3>
-          <p class="fs-6">Explore The Recent Most Bought Coffee This Week</p>
+          <p class="fs-6 headline">
+            Explore The Recent Most Bought Equipment This Week
+          </p>
         </div>
         <div class="container">
-          <div class="row">
-            <div class="d-none d-md-block col-12 col-md-4">
+          <div class="row gap-lg-0">
+            <div class="col-md-6 col-lg-3 mb-2 product">
               <div
-                style="width: 100%; height: 100%"
-                class="rounded overflow-hidden position-relative"
+                class="border border-dark rounded-2 p-3 bg-dark text-light d-flex flex-column justify-content-between card-hover slide-up"
               >
-                <img
-                  width="100%"
-                  height="100%"
-                  class="object-fit-cover"
-                  src="./images/machine.jpeg"
-                  alt="Coffee Machine"
-                />
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark text-white w-100 h-100 d-flex flex-column align-items-start justify-content-end"
-                >
-                  <h5>UltimateTaste 500 drip coffee maker</h5>
-                  <p class="text-clip-2-lines">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Illo maiores aspernatur, cum cumque vitae iusto voluptas
-                    modi eius odio aperiam?
-                  </p>
-                  <a href="" class="text-white">View</a>
+                <div class="ratio ratio-1x1">
+                  <img
+                    src="./images/equipments/illy_X2.2_iperEspresso.png"
+                    class="object-fit-cover"
+                    alt="illy X2.2 iperEspresso 2-Group Coffee Machine with Steam Wand"
+                  />
                 </div>
-              </div>
-            </div>
-            <div class="d-md-none col-12 col-md-4">
-              <div
-                class="ratio ratio-21x9 w-100 mb-2 rounded overflow-hidden position-relative"
-              >
-                <img
-                  width="100%"
-                  height="100%"
-                  class="object-fit-cover"
-                  src="./images/machine.jpeg"
-                  alt="Coffee Machine"
-                />
-                <div
-                  class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark text-white w-100 h-100 d-flex flex-column align-items-start justify-content-end"
+                <p class="mb-1">
+                  illy X2.2 iperEspresso 2-Group Coffee Machine with Steam Wand
+                </p>
+
+                <p class="fw-semibold mb-1">฿ 62,900</p>
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="E1"
+                  data-name="illy X2.2 iperEspresso 2-Group Coffee Machine with Steam Wand"
+                  data-image="./images/equipments/illy X2.2 iperEspresso 2-Group.png"
+                  data-price="62900"
                 >
-                  <h5>UltimateTaste 500 drip coffee maker</h5>
-                  <p class="text-clip-2-lines">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Illo maiores aspernatur, cum cumque vitae iusto voluptas
-                    modi eius odio aperiam?
-                  </p>
-                  <a href="" class="text-white">View</a>
-                </div>
+                  Add To Cart
+                </button>
               </div>
             </div>
 
-            <div class="col-12 col-md-8">
-              <div class="row">
-                <div class="col-6 col-md-6">
-                  <div
-                    class="ratio ratio-1x1 w-100 mb-2 rounded overflow-hidden bg-dark"
-                  >
-                    <img
-                      width="100%"
-                      height="100%"
-                      class="object-fit-cover"
-                      src="./images/machine_2.png"
-                      alt="Coffee Machine"
-                    />
-                    <div
-                      class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark text-white w-100 h-100 d-flex flex-column align-items-start justify-content-end"
-                    >
-                      <h5>UltimateTaste 500 drip coffee maker</h5>
-                      <p class="text-clip-2-lines">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Illo maiores aspernatur, cum cumque vitae iusto voluptas
-                        modi eius odio aperiam?
-                      </p>
-                      <a href="" class="text-white">View</a>
-                    </div>
-                  </div>
+            <div class="col-md-6 col-lg-3 mb-2 product">
+              <div
+                class="border border-dark rounded-2 p-3 bg-dark text-light d-flex flex-column justify-content-between card-hover slide-up"
+              >
+                <div class="ratio ratio-1x1">
+                  <img
+                    src="./images/equipments/2020_coffee-machines_ese-ground_x1_illy-shop_fondo-trasp.png"
+                    class="object-fit-cover"
+                    alt="illy X1 Anniversary E.S.E. Pod & Ground Coffee Machine (Chromium)"
+                  />
                 </div>
-                <div class="col-6 col-md-6">
-                  <div
-                    class="ratio ratio-1x1 w-100 mb-2 rounded overflow-hidden bg-dark position-relative"
-                  >
-                    <img
-                      width="100%"
-                      height="100%"
-                      class="object-fit-cover"
-                      src="./images/machine_3.png"
-                      alt="Coffee Machine"
-                    />
-                    <div
-                      class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark text-white w-100 h-100 d-flex flex-column align-items-start justify-content-end"
-                    >
-                      <h5>UltimateTaste 500 drip coffee maker</h5>
-                      <p class="text-clip-2-lines">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Illo maiores aspernatur, cum cumque vitae iusto voluptas
-                        modi eius odio aperiam?
-                      </p>
-                      <a href="" class="text-white">View</a>
-                    </div>
-                  </div>
-                </div>
+                <p class="mb-1">
+                  illy X1 Anniversary E.S.E. Pod & Ground Coffee Machine
+                  (Chromium)
+                </p>
 
-                <!-- <div class="col-4 col-md-6 d-md-none">
-                  <div
-                    class="ratio ratio-1x1 w-100 mb-2"
-                    style="background-color: cadetblue"
-                  ></div>
-                </div> -->
-
-                <div class="col-12">
-                  <div
-                    class="ratio ratio-21x9 w-100 rounded overflow-hidden bg-dark position-relative"
-                  >
-                    <img
-                      width="100%"
-                      height="100%"
-                      class="object-fit-cover"
-                      src="./images/all.jpeg"
-                      alt="Coffee Machine"
-                    />
-                    <div
-                      class="position-absolute bottom-0 start-0 p-3 bg-opacity-75 bg-dark text-white w-100 h-100 d-flex flex-column align-items-end justify-content-end"
-                    >
-                      <a href="coffee-equipment.html" class="text-white"
-                        >View All Equipments</a
-                      >
-                    </div>
-                  </div>
-                </div>
+                <p class="fw-semibold mb-1">฿ 42,600</p>
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="E2"
+                  data-name="illy X1 Anniversary E.S.E. Pod & Ground Coffee Machine (Chromium)"
+                  data-image="./images/equipments/2020_coffee-machines_ese-ground_x1_illy-shop_fondo-trasp.png"
+                  data-price="42600"
+                >
+                  Add To Cart
+                </button>
               </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-2 product">
+              <div
+                class="border border-dark rounded-2 p-3 bg-dark text-light d-flex flex-column justify-content-between card-hover slide-up"
+              >
+                <div class="ratio ratio-1x1">
+                  <img
+                    src="./images/equipments/2022_EASY_ESE_MACHINE-FRONT-WHITE.png"
+                    class="object-fit-cover"
+                    alt="illy Easy Coffee Machine For E.S.E. Pods (White)"
+                  />
+                </div>
+                <p class="mb-1">
+                  illy Easy Coffee Machine For E.S.E. Pods (White)
+                </p>
+
+                <p class="fw-semibold mb-1">฿ 10,700</p>
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="E3"
+                  data-name="illy Easy Coffee Machine For E.S.E. Pods (White)"
+                  data-image="./images/equipments/2022_EASY_ESE_MACHINE-FRONT-WHITE.png"
+                  data-price="10700"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mb-2 product">
+              <div
+                class="border border-dark rounded-2 p-3 bg-dark text-light d-flex flex-column justify-content-between card-hover slide-up"
+              >
+                <div class="ratio ratio-1x1">
+                  <img
+                    src="./images/equipments/image-4.png"
+                    class="object-fit-cover"
+                    alt="illy X7.1 iperEspresso Coffee Machine (White)"
+                  />
+                </div>
+                <p class="mb-1">
+                  illy X7.1 iperEspresso Coffee Machine (White)
+                </p>
+
+                <p class="fw-semibold mb-1">฿ 17,990</p>
+                <button
+                  class="btn btn-outline-light add-to-cart w-100"
+                  data-id="E4"
+                  data-name="illy X7.1 iperEspresso Coffee Machine (White)"
+                  data-image="./images/equipments/image-4.png"
+                  data-price="17990"
+                >
+                  Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="vstack gap-2 col-md-5 mx-auto my-3">
+            <a
+              class="btn btn-outline-dark mx-auto w-100"
+              href="coffee-equipment.html"
+            >
+              See All Equipments
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- carousel -->
+      <section class="container pb-5">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div
+              class="carousel-item active ratio ratio-16x9 rounded-2 overflow-hidden"
+            >
+              <img
+                src="./images/8.png"
+                class="d-block w-100 object-fit-cover"
+                alt="3 men drinking coffee"
+              />
+            </div>
+            <div
+              class="carousel-item ratio ratio-16x9 rounded-2 overflow-hidden"
+            >
+              <img
+                src="./images/9.png"
+                class="d-block w-100 object-fit-cover"
+                alt="3 men drinking coffee"
+              />
             </div>
           </div>
         </div>
@@ -409,17 +508,37 @@
       <div class="container py-5">
         <div class="row">
           <div class="col-12 col-sm-6 col-md-3">
-            <p class="mb-0 fs-5">Products</p>
+            <p class="mb-0 fs-3">Bean Boutique</p>
             <ul class="ps-2">
-              <li class="list-group-item">Test</li>
+              <li class="list-group-item">FRESHLY ROASTED</li>
             </ul>
           </div>
           <div class="col-12 col-sm-6 col-md-3">
-            <p class="mb-0 fs-5">Category</p>
+            <p class="mb-0 fs-5">Navigation</p>
             <ul class="ps-2">
-              <li class="list-group-item">Category 1</li>
-              <li class="list-group-item">Category 2</li>
-              <li class="list-group-item">Category 3</li>
+              <li class="list-group-item">
+                <a href="/" class="text-white a-link">Home</a>
+              </li>
+              <li class="list-group-item">
+                <a href="./coffee.html" class="text-white a-link">Coffees</a>
+              </li>
+              <li class="list-group-item">
+                <a href="./coffee-equipment.html" class="text-white a-link"
+                  >Coffee Equipemnts</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a href="./events-workshops.html" class="text-white a-link"
+                  >Event & Workshops</a
+                >
+              </li>
+              <li class="list-group-item">
+                <a
+                  href="./specialoffer-subscriptions.html"
+                  class="text-white a-link"
+                  >Special Offer & Subscriptions</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-12 col-sm-6 col-md-3">
@@ -433,8 +552,12 @@
           <div class="col-12 col-sm-6 col-md-3">
             <p class="mb-0 fs-5">Follow US</p>
             <ul class="ps-2">
-              <li class="list-group-item">Facebook</li>
-              <li class="list-group-item">Instragram</li>
+              <li class="list-group-item">
+                <i class="fa-brands fa-facebook me-2"></i> Facebook
+              </li>
+              <li class="list-group-item">
+                <i class="fa-brands fa-instagram me-2"></i> Instragram
+              </li>
             </ul>
           </div>
         </div>
@@ -444,9 +567,63 @@
     <div class="bg-main py-2">
       <p class="text-center mb-0">All Right Reserved | Copyright © 2024</p>
     </div>
+
+    <!-- Modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="welcomeModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Welcome Gift: Exclusive Discount for First-Time Visitors!
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Thank you for visiting us! As a token of our appreciation, enjoy
+              an exclusive discount on your first purchase. Don't miss this
+              special opportunity!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Later
+            </button>
+            <button
+              type="button"
+              class="btn btn-dark"
+              data-bs-dismiss="modal"
+              id="emailModal"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="./lib/bootstrap/bootstrap.js"></script>
     <script src="./lib/fontawsome/fontawsome.js"></script>
     <script src="./lib/jquery/jquery.min.js"></script>
-    <script src="./js/equipments.js"></script>
+    <script src="./lib/scrollReveal/scrollreveal.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
   </body>
 </html>
