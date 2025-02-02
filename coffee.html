@@ -239,7 +239,7 @@
                   data-id="C4"
                   data-name="illy Classico iperEspresso Coffee Capsules Flowpack – Medium
                     Roast (Pack of 100)"
-                  data-image="./images/coffee/illy Classico.png"
+                  data-image="./images/coffee/illy_classico.png"
                   data-price="4266"
                 >
                   Add To Cart
@@ -276,7 +276,7 @@
                   class="btn btn-outline-light add-to-cart w-100"
                   data-id="C5"
                   data-name="illy Whole Bean Classico Coffee – Medium Roast (250 Grams)"
-                  data-image="./images/coffee/illy Whole Bean.png"
+                  data-image="./images/coffee/illy_whole_bean.png"
                   data-price="759"
                 >
                   Add To Cart
@@ -314,7 +314,7 @@
                   data-id="C6"
                   data-name="illy Whole Beans Arabica Selection Brazil Coffee – Medium
                     Roast (250 Grams)"
-                  data-image="./images/coffee/illy Whole Beans Arabica.png"
+                  data-image="./images/coffee/illy_whole_beans_arabica.png"
                   data-price="759"
                 >
                   Add To Cart
@@ -350,7 +350,7 @@
                   data-id="C7"
                   data-name="illy Whole Beans Arabica Selection India Coffee – Medium Roast
                     (250 Grams)"
-                  data-image="./images/coffee/illy Whole Beans Arabica Selection.png"
+                  data-image="./images/coffee/illy_whole_beans_arabica_selection.png"
                   data-price="759"
                 >
                   Add To Cart
@@ -469,56 +469,5 @@
     <script src="./lib/scrollReveal/scrollreveal.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/cart.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        // Function to filter products
-        const filterProducts = () => {
-          const searchInput = $("#search-input").val().toLowerCase();
-          let foundCount = 0; // Track the number of products found
-
-          $(".product").each(function () {
-            const productName = $(this).find("p:first").text().toLowerCase();
-            const productDescription = $(this)
-              .find("p:nth-of-type(2)")
-              .text()
-              .toLowerCase();
-
-            const regex = new RegExp(searchInput, "i");
-
-            const isMatch =
-              searchInput.length === 0 ||
-              regex.test(productName) ||
-              regex.test(productDescription);
-
-            if (isMatch) {
-              $(this).removeClass("hidden");
-              foundCount++; // Increment the match count
-            } else {
-              $(this).addClass("hidden");
-            }
-
-            // Show or hide the "No results found" message
-            if (foundCount === 0 && searchInput.length > 0) {
-              $("#no-results-message").show(); // Show message if no results
-            } else {
-              $("#no-results-message").hide(); // Hide message if results found
-            }
-          });
-        };
-
-        // Add event listener to the search input
-        $("#search-input").on("input", function () {
-          filterProducts();
-        });
-
-        // Re-bind event listeners after rendering
-        const renderProducts = () => {
-          filterProducts(); // Apply filtering logic
-        };
-
-        renderProducts(); // Initial render
-      });
-    </script>
   </body>
 </html>

@@ -38,13 +38,10 @@ ScrollReveal().reveal(".hero-img", {
 
 $(document).ready(function () {
   // Check if the user has visited before
-  const hasVisited = localStorage.getItem("hasVisited");
 
-  // If not, show the modal and set the flag in localStorage
-  if (!hasVisited) {
-    localStorage.setItem("hasVisited", "true");
+  setTimeout(() => {
     $("#welcomeModal").modal("show");
-  }
+  }, 1000);
 
   $("#emailForm").on("submit", function (e) {
     e.preventDefault();
